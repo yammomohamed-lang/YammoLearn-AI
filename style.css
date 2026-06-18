@@ -1,0 +1,67 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-family: sans-serif;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1) rotateY(10deg);
+}
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* glowing effect */
+h1 {
+  font-size: 50px;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+button {
+  padding: 15px 30px;
+  background: #00ffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card {
+  padding: 30px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1) rotateY(10deg);
+}

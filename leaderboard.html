@@ -1,0 +1,14 @@
+<h1>Leaderboard</h1>
+<div id="list"></div>
+
+<script>
+fetch("http://localhost:5000/users")
+  .then(res => res.json())
+  .then(data => {
+    let html = "";
+    data.forEach(u => {
+      html += `<p>${u.name} - ${u.score}</p>`;
+    });
+    document.getElementById("list").innerHTML = html;
+  });
+</script>

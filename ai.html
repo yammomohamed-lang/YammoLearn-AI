@@ -1,0 +1,25 @@
+<h1>AI Teacher</h1>
+
+<input id="msg" placeholder="Ask anything...">
+<button onclick="ask()">Send</button>
+
+<div id="reply"></div>
+
+<script>
+function ask() {
+  fetch("http://localhost:5000/ai", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      message: document.getElementById("msg").value
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("reply").innerText =
+      data.choices[0].message.content;
+  });
+}
+</script>

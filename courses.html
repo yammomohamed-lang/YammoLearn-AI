@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Choose Your Course</h1>
+
+  <div class="cards">
+    <div class="card" onclick="go('language')">🌍 Languages</div>
+    <div class="card" onclick="go('math')">➗ Math</div>
+    <div class="card" onclick="go('coding')">💻 Coding</div>
+  </div>
+
+  <script>
+    function go(course) {
+      window.location.href = course + ".html";
+    }
+  </script>
+
+</body>
+</html>
