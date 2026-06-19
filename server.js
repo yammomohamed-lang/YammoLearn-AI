@@ -99,3 +99,30 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+const express = require("express");
+const app = express();
+
+app.use(express.json());
+app.use(express.static(__dirname)); // muhiim
+
+let users = [];
+
+// Home (KAN BADAL)
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html"); // muhiim 🔥
+});
+
+// Save score
+app.post("/save", (req, res) => {
+  const { name, score } = req.body;
+  users.push({ name, score });
+
+  res.json({
+    message: "Saved!",
+    users
+  });
+});
+
+app.listen(10000, () => {
+  console.log("Server running on port 10000");
+});
